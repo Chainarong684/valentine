@@ -55,9 +55,9 @@
 */
 const messages = [
     "Are you sure?",
-    "Really sure??",
+    "Really sure?",
     "Are you positive?",
-    "Pookie please...",
+    "please...",
     "Just think about it!",
     "If you say no, I will be really sad...",
     "I will be very sad...",
@@ -80,3 +80,17 @@ function handleNoClick() {
 function handleYesClick() {
     window.location.href = "yes_page.html";
 }
+
+function enableImageToggle() {
+    const img = document.getElementById('celebrate-img');
+    if (!img) return;
+    const alt = img.dataset.alt;
+    if (!alt) return;
+    // store original src explicitly
+    img.dataset.original = img.src;
+    img.addEventListener('click', () => {
+        img.src = img.src === img.dataset.original ? img.dataset.alt : img.dataset.original;
+    });
+}
+
+document.addEventListener('DOMContentLoaded', enableImageToggle);

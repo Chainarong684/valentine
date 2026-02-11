@@ -1,24 +1,55 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f9e3e3;
-    font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f9e3e3;
+  font-family: "Arial", sans-serif;
 }
 
 .container {
-    text-align: center;
+  text-align: center;
 }
 
 .header_text {
-    font-size: 3em;
-    color: #d32f2f;
+  font-size: 3em;
+  color: #d32f2f;
 }
 
 .gif_container img {
-    width: 100%; 
-    max-width: 500px; 
-    height: auto; 
+  width: 100%; 
+  max-width: 500px; 
+  height: auto; 
+  cursor: pointer;
+}
+
+.actions {
+  margin-top: 1rem;
+}
+
+.play-again-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: white;
+  color: #d32f2f;
+  text-decoration: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  transition:
+    transform 120ms ease,
+    box-shadow 120ms ease;
+}
+
+.play-again-button:hover,
+.play-again-button:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+}
+
+.play-again-button svg {
+  display: block;
 }
